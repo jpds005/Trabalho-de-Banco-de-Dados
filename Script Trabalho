@@ -1,1 +1,15 @@
-xxx
+--Tabela alunos
+CREATE table Alunos (
+  Matricula INTEGER PRIMARY KEY AUTOINCREMENT ,
+  Nome Varchar(50) NOT NULL,
+  Datanascimento date NULL,
+  Serie Varchar(10) NOT NULL);
+--Tabela responsáveis
+Create table Responsáveis (
+  Nome Varchar(50) NOT NULL,
+  Datanascimento date NULL,
+  CPF Varchar(14) NOT NULL,
+  Telefone Varchar(13) NULL,
+  RelaçãoComAluno varchar(20) NULL,
+  MatriculaDoAluno int NOT NULL,
+  FOREIGN KEY (MatriculaDoAluno) REFERENCES Alunos(Matricula));
