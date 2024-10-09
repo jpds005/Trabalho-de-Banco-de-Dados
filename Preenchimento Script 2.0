@@ -70,13 +70,8 @@ INSERT INTO Substituto (Matricula, Nome, Telefone, CPF, Endereco) VALUES
 
 
 INSERT INTO Professor (Ano_Escolar, Nome, Telefone, CPF, Endereco, Formacao_Academica) VALUES
-(1, 'Ana Maria', '111222333', '11122233344', 'Rua A, 1', 'Pedagogia'),
-(2, 'Carlos Eduardo', '222333444', '22233344455', 'Rua B, 2', 'Matemática'),
-(3, 'Fernanda Lima', '333444555', '33344455566', 'Rua C, 3', 'Português'),
-(4, 'João Silva', '444555666', '44455566677', 'Rua D, 4', 'Ciências'),
-(5, 'Patrícia Souza', '555666777', '55566677788', 'Rua E, 5', 'História'),
-(1, 'Mariana Costa', '666777888', '66677788899', 'Rua F, 6', 'Educação Física'),
-(2, 'Roberto Santos', '777888999', '77788899900', 'Rua G, 7', 'Geografia'),
-(3, 'Sofia Almeida', '888999000', '88899900011', 'Rua H, 8', 'Artes'),
-(4, 'Thiago Mendes', '999000111', '99900011122', 'Rua I, 9', 'Inglês'),
-(5, 'Juliana Ferreira', '000111222', '00011122233', 'Rua J, 10', 'Educação Especial');
+(1, 'Mariana Costa', '666777888', '66677788899', 'Rua F, 6', 'Pedagogia'),
+(2, 'Roberto Santos', '777888999', '77788899900', 'Rua G, 7', 'Pedagogia'),
+(3, 'Sofia Almeida', '888999000', '88899900011', 'Rua H, 8', 'Pedagogia'),
+(4, 'Thiago Mendes', '999000111', '99900011122', 'Rua I, 9', 'Pedagogia'),
+(5, 'Juliana Ferreira', '000111222', '00011122233', 'Rua J, 10', 'Pedagogia');
