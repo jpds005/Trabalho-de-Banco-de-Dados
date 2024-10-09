@@ -1,0 +1,40 @@
+CREATE DATABASE Escola;
+USE Escola;
+
+CREATE TABLE Aluno (
+    Matricula INT AUTO_INCREMENT PRIMARY KEY,
+    Nome VARCHAR(50) NOT NULL,
+    Data_Nascimento DATE NOT NULL,
+    Ano_Escolar INT UNIQUE CHECK (Ano_Escolar BETWEEN 1 AND 5)
+);
+
+CREATE TABLE Responsavel (
+    Matricula INT,
+    Nome VARCHAR(50) NOT NULL,
+    Telefone VARCHAR(15),
+    CPF CHAR(11) NOT NULL,  -- O CPF é armazenado como uma string de 11 caracteres
+    Endereco VARCHAR(100),
+    PRIMARY KEY (Matricula),
+    FOREIGN KEY (Matricula) REFERENCES Aluno(Matricula) ON DELETE CASCADE
+);
+
+CREATE TABLE Substituto (
+    Matricula INT,
+    Nome VARCHAR(50) NOT NULL,
+    Telefone VARCHAR(15),
+    CPF CHAR(11) NOT NULL,
+    Endereco VARCHAR(100),
+    PRIMARY KEY (Matricula),
+    FOREIGN KEY (Matricula) REFERENCES Responsavel(Matricula) ON DELETE CASCADE
+);
+
+CREATE TABLE Professor (
+    Ano_Escolar INT UNIQUE,
+    Nome VARCHAR(50) NOT NULL,
+    Telefone VARCHAR(15),
+    CPF CHAR(11) NOT NULL,
+    Endereco VARCHAR(100),
+    Formacao_Academica VARCHAR(100),
+    PRIMARY KEY (Ano_Escolar),
+    FOREIGN KEY (Ano_Escolar) REFERENCES Aluno(Ano_Escolar) ON DELETE CASCADE
+);
