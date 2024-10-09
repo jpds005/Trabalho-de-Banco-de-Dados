@@ -5,6 +5,7 @@ CREATE TABLE Aluno (
     Matricula INT AUTO_INCREMENT PRIMARY KEY,     -- A Matrícula é criada automaticamente quando alguém é inserido. Ela é a chave primária da tabela.
     Nome VARCHAR(50) NOT NULL,     -- O Nome é armazenado como uma string de até 50 caracteres. 
     Data_Nascimento DATE NOT NULL,     -- A Data de Nascimento é armazenada em formato de data.
+    Comorbidades VARCHAR(200) NULL,     -- Comorbidades indicarão doenças, alergias, etc. NULL para uma criança saudável não crashar o sistema.
     Ano_Escolar INT UNIQUE CHECK (Ano_Escolar BETWEEN 1 AND 5)     -- O Ano Escolar é armazenado como um inteiro que DEVE estar entre 1 e 5.
 );
 
