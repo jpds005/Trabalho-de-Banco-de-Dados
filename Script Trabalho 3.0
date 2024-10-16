@@ -46,3 +46,57 @@ CREATE TABLE Professor (
     PRIMARY KEY (Ano_Escolar),
     FOREIGN KEY (Ano_Escolar) REFERENCES Turma(Ano_Escolar) ON DELETE CASCADE
 );
+
+
+
+
+
+
+
+
+
+
+CREATE TABLE Turma (
+    Turno VARCHAR(1) CHECK (Turno IN ('M', 'T')) NOT NULL,
+    Ano_Escolar INT PRIMARY KEY CHECK (Ano_Escolar BETWEEN 1 AND 5)
+);
+
+CREATE TABLE Aluno (
+    Matricula SERIAL PRIMARY KEY,
+    Nome VARCHAR(50) NOT NULL,
+    Data_Nascimento DATE NOT NULL,
+    Comorbidades VARCHAR(200),
+    Ano_Escolar INT,
+    FOREIGN KEY (Ano_Escolar) REFERENCES Turma(Ano_Escolar) ON DELETE CASCADE,
+    UNIQUE (Ano_Escolar) CHECK (Ano_Escolar BETWEEN 1 AND 5)
+);
+
+CREATE TABLE Responsavel (
+    Matricula INT,
+    Nome VARCHAR(50) NOT NULL,
+    Telefone VARCHAR(15),
+    CPF CHAR(11) NOT NULL,
+    Endereco VARCHAR(100),
+    PRIMARY KEY (Matricula),
+    FOREIGN KEY (Matricula) REFERENCES Aluno(Matricula) ON DELETE CASCADE
+);
+
+CREATE TABLE Substituto (
+    Matricula INT,
+    Nome VARCHAR(50) NOT NULL,
+    Telefone VARCHAR(15),
+    CPF CHAR(11) NOT NULL,
+    Endereco VARCHAR(100),
+    PRIMARY KEY (Matricula),
+    FOREIGN KEY (Matricula) REFERENCES Responsavel(Matricula) ON DELETE CASCADE
+);
+
+CREATE TABLE Professor (
+    Ano_Escolar INT PRIMARY KEY CHECK (Ano_Escolar BETWEEN 1 AND 5),
+    Nome VARCHAR(50) NOT NULL,
+    Telefone VARCHAR(15),
+    CPF CHAR(11) NOT NULL,
+    Endereco VARCHAR(100),
+    Formacao_Academica VARCHAR(100),
+    FOREIGN KEY (Ano_Escolar) REFERENCES Turma(Ano_Escolar) ON DELETE CASCADE
+);
