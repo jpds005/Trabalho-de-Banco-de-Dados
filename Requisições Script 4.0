@@ -1,0 +1,9 @@
+SELECT * FROM Aluno WHERE Ano_Escolar = '1M';
+
+SELECT * FROM Aluno WHERE Ano_Escolar = '4T';
+
+SELECT * FROM Responsavel WHERE Matricula in (SELECT Matricula from Aluno where Ano_Escolar = '4T');
+
+SELECT * FROM Substituto WHERE Matricula in (SELECT Matricula from Aluno where Ano_Escolar = '4T');
+
+SELECT * FROM Professor WHERE Ano_Escolar = '4T';
