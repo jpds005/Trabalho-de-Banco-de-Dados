@@ -1,0 +1,320 @@
+-- Inserções para a tabela Turma
+INSERT INTO Turma (Ano_Escolar) VALUES 
+('1M'),
+('1T'),
+('2M'),
+('2T'),
+('3M'),
+('3T'),
+('4M'),
+('4T'),
+('5M'),
+('5T'),
+('6M'),
+('6T');
+
+-- Inserções para a tabela Aluno
+-- Turma 1M
+INSERT INTO Aluno (Nome, Data_Nascimento, Comorbidades, Ano_Escolar) VALUES 
+('Alice Silva', '2010-05-14', NULL, '1M'),
+('Bruno Santos', '2011-06-22', NULL, '1M'),
+('Carla Oliveira', '2010-03-10', 'Asma', '1M'),
+('Daniel Lima', '2009-11-30', NULL, '1M'),
+('Eduarda Costa', '2011-01-15', NULL, '1M');
+
+-- Turma 1T
+INSERT INTO Aluno (Nome, Data_Nascimento, Comorbidades, Ano_Escolar) VALUES 
+('Felipe Mendes', '2008-12-05', NULL, '1T'),
+('Gustavo Almeida', '2010-04-25', 'Alergia', '1T'),
+('Helena Pereira', '2011-07-18', NULL, '1T'),
+('Igor Ferreira', '2009-09-09', NULL, '1T'),
+('Júlia Martins', '2008-08-01', NULL, '1T');
+
+-- Turma 2M
+INSERT INTO Aluno (Nome, Data_Nascimento, Comorbidades, Ano_Escolar) VALUES 
+('Lucas Ribeiro', '2010-02-14', NULL, '2M'),
+('Mariana Torres', '2011-03-22', 'Alergia', '2M'),
+('Natan Souza', '2010-11-30', NULL, '2M'),
+('Olivia Costa', '2011-06-15', NULL, '2M'),
+('Pedro Lima', '2009-05-10', NULL, '2M');
+
+-- Turma 2T
+INSERT INTO Aluno (Nome, Data_Nascimento, Comorbidades, Ano_Escolar) VALUES 
+('Quiteria Santos', '2009-10-21', NULL, '2T'),
+('Rafael Oliveira', '2010-09-19', NULL, '2T'),
+('Sofia Lima', '2011-12-14', NULL, '2T'),
+('Thiago Almeida', '2008-07-07', NULL, '2T'),
+('Vanessa Ferreira', '2010-04-28', NULL, '2T');
+
+-- Turma 3M
+INSERT INTO Aluno (Nome, Data_Nascimento, Comorbidades, Ano_Escolar) VALUES 
+('Wesley Nascimento', '2009-08-25', NULL, '3M'),
+('Yasmin Cardoso', '2011-01-05', NULL, '3M'),
+('Zé Carlos', '2010-02-10', 'Asma', '3M'),
+('Ana Beatriz', '2008-03-14', NULL, '3M'),
+('Bruno Henrique', '2010-05-16', NULL, '3M');
+
+-- Turma 3T
+INSERT INTO Aluno (Nome, Data_Nascimento, Comorbidades, Ano_Escolar) VALUES 
+('Carla Dias', '2010-11-01', NULL, '3T'),
+('Daniela Silva', '2011-04-30', NULL, '3T'),
+('Eduardo Lima', '2009-07-25', NULL, '3T'),
+('Fernanda Santos', '2010-12-18', NULL, '3T'),
+('Gabriel Oliveira', '2009-09-22', NULL, '3T');
+
+-- Turma 4M
+INSERT INTO Aluno (Nome, Data_Nascimento, Comorbidades, Ano_Escolar) VALUES 
+('Helena Gomes', '2008-10-10', NULL, '4M'),
+('Igor Martins', '2009-03-12', NULL, '4M'),
+('Luana Costa', '2010-05-25', 'Asma', '4M'),
+('Marcos Silva', '2011-01-11', NULL, '4M'),
+('Nina Santos', '2009-02-20', NULL, '4M');
+
+-- Turma 4T
+INSERT INTO Aluno (Nome, Data_Nascimento, Comorbidades, Ano_Escolar) VALUES 
+('Otávio Ferreira', '2008-12-30', NULL, '4T'),
+('Patrícia Almeida', '2010-07-05', NULL, '4T'),
+('Ricardo Lima', '2011-08-15', NULL, '4T'),
+('Sofia Nascimento', '2009-09-25', NULL, '4T'),
+('Tiago Ribeiro', '2010-04-20', NULL, '4T');
+
+-- Turma 5M
+INSERT INTO Aluno (Nome, Data_Nascimento, Comorbidades, Ano_Escolar) VALUES 
+('Ursula Costa', '2009-06-17', NULL, '5M'),
+('Vinícius Oliveira', '2010-01-02', 'Alergia', '5M'),
+('Wellington Dias', '2008-10-29', NULL, '5M'),
+('Xuxa Santos', '2011-02-03', NULL, '5M'),
+('Yara Martins', '2008-12-12', NULL, '5M');
+
+-- Turma 5T
+INSERT INTO Aluno (Nome, Data_Nascimento, Comorbidades, Ano_Escolar) VALUES 
+('Zé Pereira', '2009-03-21', NULL, '5T'),
+('Alice Lima', '2010-05-16', NULL, '5T'),
+('Bruno Mendes', '2008-09-15', NULL, '5T'),
+('Carla Torres', '2011-04-20', NULL, '5T'),
+('Daniela Souza', '2009-07-19', NULL, '5T');
+
+-- Turma 6M
+INSERT INTO Aluno (Nome, Data_Nascimento, Comorbidades, Ano_Escolar) VALUES 
+('Eliane Costa', '2008-11-05', NULL, '6M'),
+('Felipe Almeida', '2010-03-15', NULL, '6M'),
+('Gustavo Nascimento', '2009-05-10', 'Asma', '6M'),
+('Heloísa Ribeiro', '2011-02-08', NULL, '6M'),
+('Igor Lima', '2008-04-30', NULL, '6M');
+
+-- Turma 6T
+INSERT INTO Aluno (Nome, Data_Nascimento, Comorbidades, Ano_Escolar) VALUES 
+('Júlia Santos', '2010-01-25', NULL, '6T'),
+('Karla Torres', '2009-11-18', NULL, '6T'),
+('Luiz Henrique', '2008-12-15', NULL, '6T'),
+('Maria Clara', '2011-06-20', NULL, '6T'),
+('Nicolas Gomes', '2009-10-10', NULL, '6T');
+
+-- Inserções para a tabela Responsavel
+-- Responsáveis para os alunos da turma 1M
+INSERT INTO Responsavel (Matricula, Nome, Telefone, CPF, Endereco) VALUES 
+(1, 'Mariana Silva', '11987654321', '12345678901', 'Rua A, 123'),
+(2, 'Carlos Santos', '11987654322', '23456789012', 'Rua B, 234'),
+(3, 'Fernanda Oliveira', '11987654323', '34567890123', 'Rua C, 345'),
+(4, 'João Lima', '11987654324', '45678901234', 'Rua D, 456'),
+(5, 'Patrícia Costa', '11987654325', '56789012345', 'Rua E, 567');
+
+-- Responsáveis para os alunos da turma 1T
+INSERT INTO Responsavel (Matricula, Nome, Telefone, CPF, Endereco) VALUES 
+(6, 'Ricardo Mendes', '11987654326', '67890123456', 'Rua F, 678'),
+(7, 'Sofia Almeida', '11987654327', '78901234567', 'Rua G, 789'),
+(8, 'Lucas Pereira', '11987654328', '89012345678', 'Rua H, 890'),
+(9, 'Ana Ferreira', '11987654329', '90123456789', 'Rua I, 901'),
+(10, 'Cláudia Martins', '11987654330', '01234567890', 'Rua J, 1000');
+
+-- Responsáveis para os alunos da turma 2M
+INSERT INTO Responsavel (Matricula, Nome, Telefone, CPF, Endereco) VALUES 
+(11, 'Fernanda Lima', '11987654331', '12345678902', 'Rua K, 123'),
+(12, 'Ricardo Soares', '11987654332', '23456789023', 'Rua L, 234'),
+(13, 'Marcos Teixeira', '11987654333', '34567890134', 'Rua M, 345'),
+(14, 'Juliana Santos', '11987654334', '45678901245', 'Rua N, 456'),
+(15, 'Tânia Silva', '11987654335', '56789012356', 'Rua O, 567');
+
+-- Responsáveis para os alunos da turma 2T
+INSERT INTO Responsavel (Matricula, Nome, Telefone, CPF, Endereco) VALUES 
+(16, 'Daniel Lima', '11987654336', '67890123467', 'Rua P, 678'),
+(17, 'Olivia Costa', '11987654337', '78901234578', 'Rua Q, 789'),
+(18, 'Renato Mendes', '11987654338', '89012345689', 'Rua R, 890'),
+(19, 'Patrícia Costa', '11987654339', '90123456790', 'Rua S, 901'),
+(20, 'Alice Martins', '11987654340', '01234567801', 'Rua T, 1000');
+
+-- Responsáveis para os alunos da turma 3M
+INSERT INTO Responsavel (Matricula, Nome, Telefone, CPF, Endereco) VALUES 
+(21, 'Juliana Alves', '11987654341', '12345678903', 'Rua U, 123'),
+(22, 'Fernando Souza', '11987654342', '23456789024', 'Rua V, 234'),
+(23, 'Gabriela Lima', '11987654343', '34567890135', 'Rua W, 345'),
+(24, 'Cláudio Ferreira', '11987654344', '45678901246', 'Rua X, 456'),
+(25, 'Danielle Gomes', '11987654345', '56789012357', 'Rua Y, 567');
+
+-- Responsáveis para os alunos da turma 3T
+INSERT INTO Responsavel (Matricula, Nome, Telefone, CPF, Endereco) VALUES 
+(26, 'Eduardo Martins', '11987654346', '67890123468', 'Rua Z, 678'),
+(27, 'Sabrina Almeida', '11987654347', '78901234579', 'Rua AA, 789'),
+(28, 'Leonardo Ribeiro', '11987654348', '89012345680', 'Rua AB, 890'),
+(29, 'Michele Oliveira', '11987654349', '90123456791', 'Rua AC, 901'),
+(30, 'Roberto Santos', '11987654350', '01234567802', 'Rua AD, 1000');
+
+-- Responsáveis para os alunos da turma 4M
+INSERT INTO Responsavel (Matricula, Nome, Telefone, CPF, Endereco) VALUES 
+(31, 'Tatiane Rodrigues', '11987654351', '12345678904', 'Rua AE, 123'),
+(32, 'Samuel Lima', '11987654352', '23456789025', 'Rua AF, 234'),
+(33, 'Joana Alves', '11987654353', '34567890136', 'Rua AG, 345'),
+(34, 'Fernando Costa', '11987654354', '45678901247', 'Rua AH, 456'),
+(35, 'Cristhiane Souza', '11987654355', '56789012358', 'Rua AI, 567');
+
+-- Responsáveis para os alunos da turma 4T
+INSERT INTO Responsavel (Matricula, Nome, Telefone, CPF, Endereco) VALUES 
+(36, 'Ricardo Gomes', '11987654356', '67890123469', 'Rua AJ, 678'),
+(37, 'Verônica Almeida', '11987654357', '78901234580', 'Rua AK, 789'),
+(38, 'Ana Clara Lima', '11987654358', '89012345681', 'Rua AL, 890'),
+(39, 'Andréia Santos', '11987654359', '90123456792', 'Rua AM, 901'),
+(40, 'Elias Martins', '11987654360', '01234567803', 'Rua AN, 1000');
+
+-- Responsáveis para os alunos da turma 5M
+INSERT INTO Responsavel (Matricula, Nome, Telefone, CPF, Endereco) VALUES 
+(41, 'Maurício Costa', '11987654361', '12345678905', 'Rua AO, 123'),
+(42, 'Beatriz Santos', '11987654362', '23456789026', 'Rua AP, 234'),
+(43, 'Thiago Lima', '11987654363', '34567890137', 'Rua AQ, 345'),
+(44, 'Vanessa Almeida', '11987654364', '45678901248', 'Rua AR, 456'),
+(45, 'Neto Ferreira', '11987654365', '56789012359', 'Rua AS, 567');
+
+-- Responsáveis para os alunos da turma 5T
+INSERT INTO Responsavel (Matricula, Nome, Telefone, CPF, Endereco) VALUES 
+(46, 'Paula Lima', '11987654366', '67890123470', 'Rua AT, 678'),
+(47, 'Henrique Gomes', '11987654367', '78901234581', 'Rua AU, 789'),
+(48, 'Aline Costa', '11987654368', '89012345682', 'Rua AV, 890'),
+(49, 'Marcos Santos', '11987654369', '90123456793', 'Rua AW, 901'),
+(50, 'Roberta Almeida', '11987654370', '01234567804', 'Rua AX, 1000');
+
+-- Responsáveis para os alunos da turma 6M
+INSERT INTO Responsavel (Matricula, Nome, Telefone, CPF, Endereco) VALUES 
+(51, 'Felipe Nascimento', '11987654371', '12345678906', 'Rua AY, 123'),
+(52, 'Sara Lima', '11987654372', '23456789027', 'Rua AZ, 234'),
+(53, 'Rogerio Santos', '11987654373', '34567890138', 'Rua BA, 345'),
+(54, 'Cristina Ferreira', '11987654374', '45678901249', 'Rua BB, 456'),
+(55, 'Márcio Oliveira', '11987654375', '56789012360', 'Rua BC, 567');
+
+-- Responsáveis para os alunos da turma 6T
+INSERT INTO Responsavel (Matricula, Nome, Telefone, CPF, Endereco) VALUES 
+(56, 'Fabiana Alves', '11987654376', '67890123471', 'Rua BD, 678'),
+(57, 'Guilherme Santos', '11987654377', '78901234582', 'Rua BE, 789'),
+(58, 'Vivian Almeida', '11987654378', '89012345683', 'Rua BF, 890'),
+(59, 'Robson Lima', '11987654379', '90123456794', 'Rua BG, 901'),
+(60, 'Carla Gomes', '11987654380', '01234567805', 'Rua BH, 1000');
+
+-- Inserções para a tabela Substituto
+-- Substitutos para os alunos da turma 1M
+INSERT INTO Substituto (Matricula, Nome, Telefone, CPF, Endereco) VALUES 
+(1, 'Raquel Silva', '11999999901', '11111111111', 'Rua A, 124'),
+(2, 'Fernando Santos', '11999999902', '22222222222', 'Rua B, 235'),
+(3, 'Eliane Oliveira', '11999999903', '33333333333', 'Rua C, 346'),
+(4, 'Sérgio Lima', '11999999904', '44444444444', 'Rua D, 457'),
+(5, 'Marcos Costa', '11999999905', '55555555555', 'Rua E, 568');
+
+-- Substitutos para os alunos da turma 1T
+INSERT INTO Substituto (Matricula, Nome, Telefone, CPF, Endereco) VALUES 
+(6, 'Larissa Mendes', '11999999906', '66666666666', 'Rua F, 679'),
+(7, 'Tatiane Almeida', '11999999907', '77777777777', 'Rua G, 780'),
+(8, 'Eduardo Pereira', '11999999908', '88888888888', 'Rua H, 891'),
+(9, 'Viviane Ferreira', '11999999909', '99999999999', 'Rua I, 902'),
+(10, 'Andréia Martins', '11999999910', '00000000000', 'Rua J, 1011');
+
+-- Substitutos para os alunos da turma 2M
+INSERT INTO Substituto (Matricula, Nome, Telefone, CPF, Endereco) VALUES 
+(11, 'Miriam Santos', '11999999911', '11111111112', 'Rua K, 124'),
+(12, 'Paulo Gomes', '11999999912', '22222222223', 'Rua L, 235'),
+(13, 'Elaine Costa', '11999999913', '33333333334', 'Rua M, 346'),
+(14, 'Bruno Alves', '11999999914', '44444444445', 'Rua N, 457'),
+(15, 'Silvia Oliveira', '11999999915', '55555555556', 'Rua O, 568');
+
+-- Substitutos para os alunos da turma 2T
+INSERT INTO Substituto (Matricula, Nome, Telefone, CPF, Endereco) VALUES 
+(16, 'Ricardo Lima', '11999999916', '66666666667', 'Rua P, 679'),
+(17, 'Flávia Almeida', '11999999917', '77777777778', 'Rua Q, 780'),
+(18, 'Cristiano Mendes', '11999999918', '88888888889', 'Rua R, 891'),
+(19, 'Beatriz Silva', '11999999919', '99999999990', 'Rua S, 902'),
+(20, 'Lúcio Martins', '11999999920', '00000000001', 'Rua T, 1011');
+
+-- Substitutos para os alunos da turma 3M
+INSERT INTO Substituto (Matricula, Nome, Telefone, CPF, Endereco) VALUES 
+(21, 'Ana Carolina', '11999999921', '11111111113', 'Rua U, 124'),
+(22, 'Vinícius Ribeiro', '11999999922', '22222222224', 'Rua V, 235'),
+(23, 'Larissa Nascimento', '11999999923', '33333333335', 'Rua W, 346'),
+(24, 'Juliano Santos', '11999999924', '44444444446', 'Rua X, 457'),
+(25, 'Bárbara Gomes', '11999999925', '55555555557', 'Rua Y, 568');
+
+-- Substitutos para os alunos da turma 3T
+INSERT INTO Substituto (Matricula, Nome, Telefone, CPF, Endereco) VALUES 
+(26, 'Gustavo Lima', '11999999926', '66666666668', 'Rua Z, 679'),
+(27, 'Mariana Ferreira', '11999999927', '77777777779', 'Rua AA, 780'),
+(28, 'Cláudia Almeida', '11999999928', '88888888880', 'Rua AB, 891'),
+(29, 'Roberto Santos', '11999999929', '99999999991', 'Rua AC, 902'),
+(30, 'Daniela Nascimento', '11999999930', '00000000002', 'Rua AD, 1011');
+
+-- Substitutos para os alunos da turma 4M
+INSERT INTO Substituto (Matricula, Nome, Telefone, CPF, Endereco) VALUES 
+(31, 'Hugo Almeida', '11999999931', '11111111114', 'Rua AE, 124'),
+(32, 'Sabrina Nascimento', '11999999932', '22222222225', 'Rua AF, 235'),
+(33, 'Marcos Paulo', '11999999933', '33333333336', 'Rua AG, 346'),
+(34, 'Renata Costa', '11999999934', '44444444447', 'Rua AH, 457'),
+(35, 'Luiz Gustavo', '11999999935', '55555555558', 'Rua AI, 568');
+
+-- Substitutos para os alunos da turma 4T
+INSERT INTO Substituto (Matricula, Nome, Telefone, CPF, Endereco) VALUES 
+(36, 'Edgar Santos', '11999999936', '66666666669', 'Rua AJ, 679'),
+(37, 'Patrícia Lima', '11999999937', '77777777780', 'Rua AK, 780'),
+(38, 'Paulo Ferreira', '11999999938', '88888888881', 'Rua AL, 891'),
+(39, 'Camila Ribeiro', '11999999939', '99999999992', 'Rua AM, 902'),
+(40, 'Geraldo Gomes', '11999999940', '00000000003', 'Rua AN, 1011');
+
+-- Substitutos para os alunos da turma 5M
+INSERT INTO Substituto (Matricula, Nome, Telefone, CPF, Endereco) VALUES 
+(41, 'Gustavo Lima', '11999999941', '11111111115', 'Rua AO, 124'),
+(42, 'Mariana Costa', '11999999942', '22222222226', 'Rua AP, 235'),
+(43, 'Carlos Almeida', '11999999943', '33333333337', 'Rua AQ, 346'),
+(44, 'Sofia Oliveira', '11999999944', '44444444448', 'Rua AR, 457'),
+(45, 'Alberto Santos', '11999999945', '55555555559', 'Rua AS, 568');
+
+-- Substitutos para os alunos da turma 5T
+INSERT INTO Substituto (Matricula, Nome, Telefone, CPF, Endereco) VALUES 
+(46, 'Thiago Santos', '11999999946', '66666666670', 'Rua AT, 679'),
+(47, 'Raquel Ferreira', '11999999947', '77777777781', 'Rua AU, 780'),
+(48, 'Leonardo Lima', '11999999948', '88888888882', 'Rua AV, 891'),
+(49, 'Felipe Gomes', '11999999949', '99999999993', 'Rua AW, 902'),
+(50, 'Ana Beatriz', '11999999950', '00000000004', 'Rua AX, 1011');
+
+-- Substitutos para os alunos da turma 6M
+INSERT INTO Substituto (Matricula, Nome, Telefone, CPF, Endereco) VALUES 
+(51, 'Diana Silva', '11999999951', '11111111116', 'Rua AY, 124'),
+(52, 'Ricardo Nascimento', '11999999952', '22222222227', 'Rua AZ, 235'),
+(53, 'Maria Santos', '11999999953', '33333333338', 'Rua BA, 346'),
+(54, 'Fernando Almeida', '11999999954', '44444444449', 'Rua BB, 457'),
+(55, 'Patrícia Gomes', '11999999955', '55555555560', 'Rua BC, 568');
+
+-- Substitutos para os alunos da turma 6T
+INSERT INTO Substituto (Matricula, Nome, Telefone, CPF, Endereco) VALUES 
+(56, 'Tiago Lima', '11999999956', '66666666671', 'Rua BD, 679'),
+(57, 'Ana Paula', '11999999957', '77777777782', 'Rua BE, 780'),
+(58, 'Jéssica Almeida', '11999999958', '88888888883', 'Rua BF, 891'),
+(59, 'Carlos Ferreira', '11999999959', '99999999994', 'Rua BG, 902'),
+(60, 'Juliana Nascimento', '11999999960', '00000000005', 'Rua BH, 1011');
+
+-- Inserções para a tabela Professor
+INSERT INTO Professor (Ano_Escolar, Nome, Telefone, CPF, Endereco, Formacao_Academica) VALUES 
+('1M', 'Prof. Ana Clara', '11988888801', '12345678900', 'Rua C, 1', 'Pedagogia'),
+('1T', 'Prof. João Pedro', '11988888802', '09876543211', 'Rua D, 2', 'Pedagogia'),
+('2M', 'Prof. Fernanda Lima', '11988888803', '11122334455', 'Rua E, 3', 'História'),
+('2T', 'Prof. Rafael Silva', '11988888804', '22334455667', 'Rua F, 4', 'Biologia'),
+('3M', 'Prof. Juliana Costa', '11988888805', '33445566778', 'Rua G, 5', 'Física'),
+('3T', 'Prof. Vinícius Ribeiro', '11988888806', '44556677889', 'Rua H, 6', 'Química'),
+('4M', 'Prof. Carla Almeida', '11988888807', '55667788990', 'Rua I, 7', 'Matemática'),
+('4T', 'Prof. Marcos Pereira', '11988888808', '66778899001', 'Rua J, 8', 'História'),
+('5M', 'Prof. Eduardo Lima', '11988888809', '77889900112', 'Rua K, 9', 'Física'),
+('5T', 'Prof. Gabriela Santos', '11988888810', '88990011223', 'Rua L, 10', 'Química'),
+('6M', 'Prof. Mariana Costa', '11988888811', '99001122334', 'Rua M, 11', 'Matemática'),
+('6T', 'Prof. Felipe Almeida', '11988888812', '10111233445', 'Rua N, 12', 'Biologia');
