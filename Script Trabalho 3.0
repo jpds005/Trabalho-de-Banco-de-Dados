@@ -1,6 +1,3 @@
-CREATE DATABASE Escola;
-USE Escola;
-
 CREATE TABLE Turma (
     Turno VARCHAR(1) CHECK (Turno IN ('M', 'T')) NOT NULL,
     Ano_Escolar INT CHECK (Ano_Escolar BETWEEN 1 AND 5),
@@ -8,7 +5,7 @@ CREATE TABLE Turma (
 );
 
 CREATE TABLE Aluno (
-    Matricula INT AUTO_INCREMENT,
+    Matricula SERIAL,
     Nome VARCHAR(50) NOT NULL,
     Data_Nascimento DATE NOT NULL,
     Comorbidades VARCHAR(200) NULL,
@@ -38,7 +35,7 @@ CREATE TABLE Substituto (
 );
 
 CREATE TABLE Professor (
-    Ano_Escolar INT CHECK (Ano_Escolar BETWEEN 1 AND 5)
+    Ano_Escolar INT CHECK (Ano_Escolar BETWEEN 1 AND 5),
     Nome VARCHAR(50) NOT NULL,
     Telefone VARCHAR(15),
     CPF CHAR(11) NOT NULL,
