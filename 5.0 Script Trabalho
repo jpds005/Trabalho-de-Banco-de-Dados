@@ -1,6 +1,6 @@
 CREATE TABLE Turma (
     Ano_Escolar VARCHAR(2) CHECK (Ano_Escolar IN ('1M','1T','2M','2T','3M','3T','4M','4T','5M','5T','6M','6T')) NOT NULL,
-    -- O Ano Escolar é armazenado como uma string de 2 caracteres que DEVE estar os itens listados nos parênteses (AnoEscolar + Turno(Manhã/Tarde)).
+    -- O Ano Escolar é armazenado como uma string de 2 caracteres que DEVE estar os itens listados nos parênteses (AnoEscolar + Turno(Manhã/Tarde)) (não pode ser um campo vazio).
 
     PRIMARY KEY (Ano_Escolar)
     -- É definido o atributo "Ano_Escolar" desta tabela como uma chave primária, a fim de criar a conexão entre as tabelas e manter integridade referencial.
@@ -20,7 +20,7 @@ CREATE TABLE Aluno (
     -- Comorbidades são armazenadas como uma string de até 200 caracteres (pode ser um campo vazio).
 
     Ano_Escolar VARCHAR(2) CHECK (Ano_Escolar IN ('1M','1T','2M','2T','3M','3T','4M','4T','5M','5T','6M','6T')) NOT NULL,
-    -- O Ano Escolar é armazenado como uma string de 2 caracteres que DEVE estar os itens listados nos parênteses (AnoEscolar + Turno(Manhã/Tarde)).
+    -- O Ano Escolar é armazenado como uma string de 2 caracteres que DEVE estar os itens listados nos parênteses (AnoEscolar + Turno(Manhã/Tarde)) (não pode ser um campo vazio). 
 
     PRIMARY KEY (Matricula),
     -- É definido o atributo "Matrícula" desta tabela como uma chave primária, a fim de criar a conexão entre as tabelas e manter integridade referencial.
@@ -37,13 +37,13 @@ CREATE TABLE Responsavel (
     -- O Nome é armazenado como uma string de até 50 caracteres (não pode ser um campo vazio).
 
     Telefone VARCHAR(15) NOT NULL,
-    -- O Telefone é armazenado como uma string de até 15 caracteres (XX XX XXXXXXXXX).
+    -- O Telefone é armazenado como uma string de até 15 caracteres (XX XX XXXXXXXXX) (não pode ser um campo vazio).
 
     CPF CHAR(11) NOT NULL,
-    -- O CPF é armazenado como uma string de 11 caracteres.
+    -- O CPF é armazenado como uma string de 11 caracteres (não pode ser um campo vazio).
 
     Endereco VARCHAR(100) NOT NULL,
-    -- O Endereço é armazenado como uma string de até 100 caracteres.
+    -- O Endereço é armazenado como uma string de até 100 caracteres (não pode ser um campo vazio).
 
     PRIMARY KEY (Matricula),
     -- É definido o atributo "Matrícula" desta tabela como uma chave primária, a fim de criar a conexão entre as tabelas e manter integridade referencial.
@@ -57,16 +57,16 @@ CREATE TABLE Substituto (
     -- É criado um atributo "Matrícula", que servirá como chave estrangeira com a "Matrícula" da tabela "Responsavel".
 
     Nome VARCHAR(50) NOT NULL,
-    -- O Nome é armazenado como uma string de até 50 caracteres.
+    -- O Nome é armazenado como uma string de até 50 caracteres (não pode ser um campo vazio).
 
-    Telefone VARCHAR(15),
-    -- O Telefone é armazenado como uma string de até 15 caracteres (XX XX XXXXXXXXX).
+    Telefone VARCHAR(15) NOT NULL,
+    -- O Telefone é armazenado como uma string de até 15 caracteres (XX XX XXXXXXXXX) (não pode ser um campo vazio).
 
     CPF CHAR(11) NOT NULL,
-    -- O CPF é armazenado como uma string de 11 caracteres.
+    -- O CPF é armazenado como uma string de 11 caracteres (não pode ser um campo vazio).
 
-    Endereco VARCHAR(100),
-    -- O Endereço é armazenado como uma string de até 100 caracteres.
+    Endereco VARCHAR(100) NOT NULL,
+    -- O Endereço é armazenado como uma string de até 100 caracteres (não pode ser um campo vazio).
 
     PRIMARY KEY (Matricula),
     -- É definido o atributo "Matrícula" desta tabela como uma chave primária, a fim de criar a conexão entre as tabelas e manter integridade referencial.
@@ -77,19 +77,19 @@ CREATE TABLE Substituto (
 
 CREATE TABLE Professor (
     Ano_Escolar VARCHAR(2) CHECK (Ano_Escolar IN ('1M','1T','2M','2T','3M','3T','4M','4T','5M','5T','6M','6T')) NOT NULL,
-    -- O Ano Escolar é armazenado como uma string de 2 caracteres que DEVE estar os itens listados nos parênteses (AnoEscolar + Turno(Manhã/Tarde)).
+    -- O Ano Escolar é armazenado como uma string de 2 caracteres que DEVE estar os itens listados nos parênteses (AnoEscolar + Turno(Manhã/Tarde)) (não pode ser um campo vazio).
 
     Nome VARCHAR(50) NOT NULL,
-    -- O Nome é armazenado como uma string de até 50 caracteres.
+    -- O Nome é armazenado como uma string de até 50 caracteres (não pode ser um campo vazio).
 
-    Telefone VARCHAR(15),
-    -- O Telefone é armazenado como uma string de até 15 caracteres (XX XX XXXXXXXXX).
+    Telefone VARCHAR(15) NOT NULL,
+    -- O Telefone é armazenado como uma string de até 15 caracteres (XX XX XXXXXXXXX) (não pode ser um campo vazio).
 
     CPF CHAR(11) NOT NULL,
-    -- O CPF é armazenado como uma string de 11 caracteres.
+    -- O CPF é armazenado como uma string de 11 caracteres (não pode ser um campo vazio).
 
-    Endereco VARCHAR(100),
-    -- O Endereço é armazenado como uma string de até 100 caracteres.
+    Endereco VARCHAR(100) NOT NULL,
+    -- O Endereço é armazenado como uma string de até 100 caracteres (não pode ser um campo vazio).
 
     PRIMARY KEY (Ano_Escolar),
     -- É definido o atributo "Ano_Escolar" desta tabela como uma chave primária, a fim de criar a conexão entre as tabelas e manter integridade referencial.
