@@ -1,44 +1,99 @@
 CREATE TABLE Turma (
     Ano_Escolar VARCHAR(2) CHECK (Ano_Escolar IN ('1M','1T','2M','2T','3M','3T','4M','4T','5M','5T','6M','6T')) NOT NULL,
+    -- O Ano Escolar é armazenado como uma string de 2 caracteres que DEVE estar os itens listados nos parênteses (AnoEscolar + Turno(Manhã/Tarde)).
+
     PRIMARY KEY (Ano_Escolar)
+    -- É definido o atributo "Ano_Escolar" desta tabela como uma chave primária, a fim de criar a conexão entre as tabelas e manter integridade referencial.
 );
 
 CREATE TABLE Aluno (
     Matricula SERIAL,
+    -- A Matrícula é criada automaticamente quando alguém é inserido na tabela.
+
     Nome VARCHAR(50) NOT NULL,
+    -- O Nome é armazenado como uma string de até 50 caracteres (não pode ser um campo vazio).
+
     Data_Nascimento DATE NOT NULL,
+    -- A Data de Nascimento é armazenada em formato de data (não pode ser um campo vazio).
+
     Comorbidades VARCHAR(200) NULL,
+    -- Comorbidades são armazenadas como uma string de até 200 caracteres (pode ser um campo vazio).
+
     Ano_Escolar VARCHAR(2) CHECK (Ano_Escolar IN ('1M','1T','2M','2T','3M','3T','4M','4T','5M','5T','6M','6T')) NOT NULL,
+    -- O Ano Escolar é armazenado como uma string de 2 caracteres que DEVE estar os itens listados nos parênteses (AnoEscolar + Turno(Manhã/Tarde)).
+
     PRIMARY KEY (Matricula),
+    -- É definido o atributo "Matrícula" desta tabela como uma chave primária, a fim de criar a conexão entre as tabelas e manter integridade referencial.
+    
     FOREIGN KEY (Ano_Escolar) REFERENCES Turma(Ano_Escolar) ON DELETE CASCADE
+    -- É definida a conexão entre as tabelas "Aluno" e "Turma", usando "Ano_Escolar" como chave estrangeira (ponte).
 );
 
 CREATE TABLE Responsavel (
     Matricula INT,
+    -- É criado um atributo "Matrícula", que servirá como chave estrangeira com a "Matrícula" da tabela "Aluno".
+
     Nome VARCHAR(50) NOT NULL,
-    Telefone VARCHAR(15),
+    -- O Nome é armazenado como uma string de até 50 caracteres (não pode ser um campo vazio).
+
+    Telefone VARCHAR(15) NOT NULL,
+    -- O Telefone é armazenado como uma string de até 15 caracteres (XX XX XXXXXXXXX).
+
     CPF CHAR(11) NOT NULL,
-    Endereco VARCHAR(100),
+    -- O CPF é armazenado como uma string de 11 caracteres.
+
+    Endereco VARCHAR(100) NOT NULL,
+    -- O Endereço é armazenado como uma string de até 100 caracteres.
+
     PRIMARY KEY (Matricula),
+    -- É definido o atributo "Matrícula" desta tabela como uma chave primária, a fim de criar a conexão entre as tabelas e manter integridade referencial.
+
     FOREIGN KEY (Matricula) REFERENCES Aluno(Matricula) ON DELETE CASCADE
+    -- É definida a conexão entre as tabelas "Aluno" e "Responsavel", usando "Matricula" como chave estrangeira (ponte).
 );
 
 CREATE TABLE Substituto (
     Matricula INT,
+    -- É criado um atributo "Matrícula", que servirá como chave estrangeira com a "Matrícula" da tabela "Responsavel".
+
     Nome VARCHAR(50) NOT NULL,
+    -- O Nome é armazenado como uma string de até 50 caracteres.
+
     Telefone VARCHAR(15),
+    -- O Telefone é armazenado como uma string de até 15 caracteres (XX XX XXXXXXXXX).
+
     CPF CHAR(11) NOT NULL,
+    -- O CPF é armazenado como uma string de 11 caracteres.
+
     Endereco VARCHAR(100),
+    -- O Endereço é armazenado como uma string de até 100 caracteres.
+
     PRIMARY KEY (Matricula),
+    -- É definido o atributo "Matrícula" desta tabela como uma chave primária, a fim de criar a conexão entre as tabelas e manter integridade referencial.
+
     FOREIGN KEY (Matricula) REFERENCES Responsavel(Matricula) ON DELETE CASCADE
+    -- É definida a conexão entre as tabelas "Responsavel" e "Substituto", usando "Matricula" como chave estrangeira (ponte).
 );
 
 CREATE TABLE Professor (
     Ano_Escolar VARCHAR(2) CHECK (Ano_Escolar IN ('1M','1T','2M','2T','3M','3T','4M','4T','5M','5T','6M','6T')) NOT NULL,
+    -- O Ano Escolar é armazenado como uma string de 2 caracteres que DEVE estar os itens listados nos parênteses (AnoEscolar + Turno(Manhã/Tarde)).
+
     Nome VARCHAR(50) NOT NULL,
+    -- O Nome é armazenado como uma string de até 50 caracteres.
+
     Telefone VARCHAR(15),
+    -- O Telefone é armazenado como uma string de até 15 caracteres (XX XX XXXXXXXXX).
+
     CPF CHAR(11) NOT NULL,
+    -- O CPF é armazenado como uma string de 11 caracteres.
+
     Endereco VARCHAR(100),
+    -- O Endereço é armazenado como uma string de até 100 caracteres.
+
     PRIMARY KEY (Ano_Escolar),
+    -- É definido o atributo "Ano_Escolar" desta tabela como uma chave primária, a fim de criar a conexão entre as tabelas e manter integridade referencial.
+
     FOREIGN KEY (Ano_Escolar) REFERENCES Turma(Ano_Escolar) ON DELETE CASCADE
+    -- É definida a conexão entre as tabelas "Turma" e "Professor", usando "Ano_Escolar" como chave estrangeira (ponte).
 );
